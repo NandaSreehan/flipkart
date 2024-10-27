@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">{% csrf_token %}
+        <input type="text" required id="n1" placeholder="enter user name" name="n">
+        <button type="submit">submit</button>
+
+    </form>
+    <p>this is home page</p>
+    {% include 'common.html' %}
+    {% for i in res %}
+    <p>{{ i }}----{{ i.first_name }}----{{ i.last_name }} </p>
+    {% endfor %}
+
+
+    <p>{{ i }}</p>
+</body>
+</html>
